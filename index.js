@@ -20,16 +20,16 @@ app.use("/Tos",express.static('images'));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res)=>{
-    res.render("index.html");
+    res.render("index");
 })
 app.get("/FAQ", (req, res)=>{
-    res.render("FAQ.html");
+    res.render("FAQ");
 })
 app.get("/Projects", (req, res)=>{
-    res.render("project.html");
+    res.render("project");
 })
 app.get("/Tos", (req, res)=>{
-    res.render("TOS.html");
+    res.render("TOS");
 })
 
 app.post("/contact", (req, res)=>{
@@ -37,7 +37,7 @@ app.post("/contact", (req, res)=>{
     console.log(req.body.email);
 
     users.push({username:req.body.name, email:req.body.email});
-    res.send("Message send successfully");
+    res.render("Success");
     // res.redirect("/post");
 });
 
