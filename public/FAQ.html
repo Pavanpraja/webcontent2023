@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="my_prologo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <title>My angreeheart portfolio web 3.0 2023 || portfolio.com</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Baloo+Bhai+2:wght@400;500&family=Balsamiq+Sans:ital@0;1&family=Caveat:wght@700&family=Lobster&family=Mynerve&family=PT+Sans+Narrow:wght@700&family=PT+Serif:ital@1&family=Poppins:wght@600&family=Tilt+Warp&family=Ubuntu:wght@400;500;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: none;
+        }
+
+        html {
+            font-size: 10px;
+            width: 10px;
+            height: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 79rem;
+            width: 178.2rem;
+            background: #c3c3c352;
+        }
+
+        .accordion {
+            display: flex;
+            align-items: center;
+            width: 178rem;
+            height: 85rem;
+            justify-content: center;
+            gap: 12rem;
+        }
+
+        .accordion .image-box {
+            height: 41rem;
+            width: 57rem;
+        }
+
+        .accordion .image-box img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 3px black);
+        }
+
+        .accordion-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 36rem;
+            width: 64rem;
+            gap: 3rem;
+        }
+
+        .title {
+            font-size: 6rem;
+            filter: drop-shadow(1px 1px 3px black);
+            color: #c5c5c5;
+            margin-left: -40rem;
+        }
+
+        .faq-text li {
+            list-style: lower-roman;
+            font-size: 1.5rem;
+        }
+
+        .accordion ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            width: 57rem;
+        }
+
+        .question-arrow {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .question-arrow img {
+            width: 1.5rem;
+            height: 1.5rem;
+            filter: brightness(0);
+            margin-top: 0.7rem;
+        }
+
+        .accordion-text li.showAnswer .question-arrow img {
+            transition: 1s;
+            transform: rotate(-180deg);
+
+        }
+
+        .line {
+            display: block;
+            height: 0.05rem;
+            width: 48rem;
+            background: #a5a5a5;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: #5c5c5c;
+            font-weight: 600;
+            width: 46.71rem;
+            display: none;
+        }
+
+        .question-arrow .question {
+            width: 49rem;
+            font-size: 1.7rem;
+            color: #605d5d;
+            font-weight: 600;
+        }
+
+        .faq-text li.showAnswer p {
+            display: block;
+        }
+
+        .faq-text {
+            overflow-y: auto;
+        }
+
+        .faq-text::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (max-width:446px) {
+            .accordion {
+                flex-direction: column;
+                width: 360vw;
+                gap: 5rem;
+            }
+
+            body {
+                height: 199vh;
+                width: 361vw;
+                background: #c3c3c352;
+            }
+
+            .accordion .image-box {
+                height: 76vh;
+                width: 293vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="image-box">
+            <img src="faq.jpg" alt="logo">
+        </div>
+        <div class="accordion-text">
+            <div class="title">FAQ</div>
+
+            <ul class="faq-text">
+                <li>
+                    <div class="question-arrow">
+                        <span class="question">What is a website and how does it work?</span>
+                        <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/null/external-down-arrow-arrows-dreamstale-lineal-dreamstale-2.png"
+                            width="20rem" />
+                    </div>
+                    <p>A website is a collection of webpages located under a single domain name. These webpages contain
+                        and display information about the business or organization and are usually made up of elements
+                        such as photos, videos and text.</p>
+                    <span class="line"></span>
+                </li>
+                <li>
+                    <div class="question-arrow">
+                        <span class="question">Why every buisness need a website?</span>
+                        <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/null/external-down-arrow-arrows-dreamstale-lineal-dreamstale-2.png"
+                            width="20rem" />
+                    </div>
+                    <p>Without a website, people may question your legitimacy as a business. Having a website is an
+                        opportunity to make a great first impression and give people comfort that you're a real
+                        business. Showcasing your brand to your prospective customers is one of the most important
+                        things that you can do.</p>
+                    <span class="line"></span>
+                </li>
+                <li>
+                    <div class="question-arrow">
+                        <span class="question">Do you have specific company colors that need to be used?</span>
+                        <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/null/external-down-arrow-arrows-dreamstale-lineal-dreamstale-2.png"
+                            width="20rem" />
+                    </div>
+                    <p>hoosing the right colors for a website or a logo can be a perplexing and time-consuming task,
+                        unless you have the right knowledge of colors. Colors play a pivotal role in the success of some
+                        businesses and can make a huge impact on their revenue.</p>
+                    <span class="line"></span>
+                </li>
+                <li>
+                    <div class="question-arrow">
+                        <span class="question">What makes you different from your competitors?</span>
+                        <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/null/external-down-arrow-arrows-dreamstale-lineal-dreamstale-2.png"
+                            width="20rem" />
+                    </div>
+                    <p>"If you find your company is not in first place in comparison to your competitors, a method of
+                        differentiation is to focus on one aspect of your business product/feature and make it the best
+                        in your space. The second step is to market the focused product/feature explaining how it is
+                        better than your competition."
+                    </p>
+                    <span class="line"></span>
+                </li>
+                <li>
+                    <div class="question-arrow">
+                        <span class="question">What is the purpose of the website?</span>
+                        <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/null/external-down-arrow-arrows-dreamstale-lineal-dreamstale-2.png"
+                            width="20rem" />
+                    </div>
+                    <p>The purpose of an information centric website is to convey specific, helpful information to a
+                        specific user/audience so that the reader learns something new or understands a topic better.
+                    </p>
+                    <span class="line"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let li = document.querySelectorAll(".faq-text li")
+
+        for (var i = 0; i < li.length; i++) {
+            li[i].addEventListener("click", (e) => {
+                let clickedLi;
+                if (e.target.classList.contains("question-arrow")) {
+                    clickedLi = e.target.parentElement;
+                    // console.log(clickedLi);
+                }
+                else {
+                    clickedLi = e.target.parentElement.parentElement;
+                    // console.log(clickedLi)
+                }
+                clickedLi.classList.toggle('showAnswer');
+            })
+        }
+        // console.log(li)
+    </script>
+</body>
+
+</html>
