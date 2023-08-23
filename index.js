@@ -19,6 +19,10 @@ app.use("/Tos",express.static('images'));
 
 app.set("view engine", "ejs");
 
+app.get("/add", (req, res)=>{
+    res.send("Created this page");
+})
+
 app.get("/", (req, res)=>{
     res.render("index");
 })
