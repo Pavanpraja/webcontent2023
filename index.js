@@ -17,7 +17,7 @@ app.use("/FAQ",express.static('images'));
 app.use("/Projects",express.static('images'));
 app.use("/Tos",express.static('images'));
 
-app.set("view engine", "html");
+app.set("view engine", "ejs");
 
 app.get("/", (req, res)=>{
     res.render("index.html");
