@@ -17,17 +17,19 @@ app.use("/FAQ",express.static('images'));
 app.use("/Projects",express.static('images'));
 app.use("/Tos",express.static('images'));
 
+app.set("view engine", "html");
+
 app.get("/", (req, res)=>{
-    res.render("index");
+    res.render("index.html");
 })
 app.get("/FAQ", (req, res)=>{
     res.render("FAQ.html");
 })
-app.get("/projects.html", (req, res)=>{
-    res.render("project");
+app.get("/Projects", (req, res)=>{
+    res.render("project.html");
 })
-app.get("/Tos.html", (req, res)=>{
-    res.render("TOS");
+app.get("/Tos", (req, res)=>{
+    res.render("TOS.html");
 })
 
 app.post("/contact", (req, res)=>{
