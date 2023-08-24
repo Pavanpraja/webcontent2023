@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import mongoose from "mongoose"; //Mongoose material
+import cookieParser from "cookie-parser";
 
 mongoose
   .connect("mongodb://localhost:27017", {
@@ -25,6 +26,7 @@ const app = express();
 //using middlewares
 app.use(express.static(path.join(path.resolve(), "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 //use view engin of ejs
 // app.set("view engine", "ejs");
@@ -39,7 +41,14 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index");
 
-  console.log(req.cookies);
+  const {token} = req.cookies;
+
+  if(token){
+    res.render("Signout");
+  }
+  else{
+    res.render("Signup");
+  }
 });
 app.get("/FAQ", (req, res) => {
   res.render("FAQ");
