@@ -39,16 +39,16 @@ app.use("/Tos", express.static("images"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index");
+    res.render("index");
 
   const {token} = req.cookies;
 
   if(token){
     res.render("Signout");
+  }else{
+    res.render("Signup1");
   }
-  else{
-    res.render("Signup");
-  }
+  
 });
 app.get("/FAQ", (req, res) => {
   res.render("FAQ");
@@ -61,7 +61,7 @@ app.get("/Tos", (req, res) => {
 });
 
 //start Authentication
-app.post("/Signup", (req, res) => {
+app.post("/Signup1", (req, res) => {
   res.cookie("token", "imin", {
     httpOnly: true,
     expires: new Date(Date.now() + 60 * 1000),
