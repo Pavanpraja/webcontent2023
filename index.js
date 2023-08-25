@@ -39,9 +39,9 @@ app.use("/Tos", express.static("images"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render("index");
+  res.render("index");
 
-    const {token} = req.cookies;
+  const {token} = req.cookies;
 
     if(token){
       res.render("Signout");
@@ -60,6 +60,9 @@ app.get("/Tos", (req, res) => {
   res.render("TOS");
 });
 
+app.get("/Signup", (req, res) => {
+  res.render("Signup");
+});
 
 //start Authentication
 app.post("/Signup", (req, res) => {
