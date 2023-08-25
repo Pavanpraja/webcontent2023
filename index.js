@@ -40,7 +40,14 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
     res.render("index");
-  
+
+    const {token} = req.cookies;
+
+    if(token){
+      res.render("Signout");
+    }else{
+      res.render("Signup");
+    }
 });
 
 app.get("/FAQ", (req, res) => {
@@ -52,19 +59,10 @@ app.get("/Projects", (req, res) => {
 app.get("/Tos", (req, res) => {
   res.render("TOS");
 });
-app.get("/signup1", (req, res) => {
-  res.render("Signup1");
-  const {token} = req.cookies;
 
-  if(token){
-    res.render("Signout");
-  }else{
-    res.render("Signup1");
-  }
-});
 
 //start Authentication
-app.post("/Signup1", (req, res) => {
+app.post("/Signup", (req, res) => {
   res.cookie("token", "imin", {
     httpOnly: true,
     expires: new Date(Date.now() + 60 * 1000),
