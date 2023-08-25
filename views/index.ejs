@@ -1718,12 +1718,32 @@
                     <img src="https://img.icons8.com/ios-glyphs/30/null/search--v1.png" class="s-icon"
                         onclick="onclickr()" />
                     <img src="nightm.jpg" id="icon" onclick="onclick()" />
-                    <a href="Signup.html"><button class="s-btn" onclick="openPopup1()">Signup</button></a>
+                    <button class="s-btn" onclick="openPopup1()">Signup</button>
                     <div class="s-input">
                         <input type="text" placeholder="Search here..." class="search">
                     </div>
                 </div>
                 <!-- signup form presented -->
+
+                <div class="first_button">
+                    <form action="/Signup" method="POST" class="Spopup" id="Spopup">
+                        <h1>Sign in</h1>
+                        <span class="Sinput">Email</span>
+                        <br><input type="email" name="email" class="inputS" placeholder="Enter Email" autocomplete="off"
+                            required>
+
+                        <br><span class="Sinput1">Password</span>
+                        <br><input type="password" name="Phone" id="SSI" class="inputS1" placeholder="Enter Password"
+                            autocomplete="off" required>
+                        <span class="eye" onclick="myHiddenEye()">
+                            <i class="fa-regular fa-eye" id="Ehide1" style="color: #000000;"></i>
+                            <i class="fa-regular fa-eye-slash" id="Ehide2" style="color: #000000;"></i>
+                        </span>
+
+                        <br><a href="Fpassword" class="SLink">Forget Your Password?</a>
+                        <br><button type="submit" class="inputS3" autocomplete="off">Sign in</button>
+                    </form>
+                </div>
 
             </div>
         </nav>
