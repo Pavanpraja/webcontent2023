@@ -3,8 +3,7 @@ import path from "path";
 import mongoose from "mongoose"; //Mongoose material
 import cookieParser from "cookie-parser";
 
-mongoose
-  .connect("mongodb://localhost:27017", {
+mongoose.connect("mongodb://localhost:27017", {
     //Mongoose material
     dbName: "WEBDATA", //Mongoose material
   })
@@ -16,6 +15,7 @@ const messageSchema = new mongoose.Schema({
   name: String, //Mongoose material
   email: String, //Mongoose material
 }); //Mongoose material
+
 
 const Message = mongoose.model("Message", messageSchema); //Mongoose material
 
@@ -38,23 +38,23 @@ app.use("/Tos", express.static("images"));
 
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("index");
-
-  
-});
-app.get("/index", (req, res) => {
-
+const isAuthenticated = (req, res, next) => {
   const { token } = req.cookies;
   console.log(token);
-  
-  if(token){
-    res.render("Signout");
-  }
-  else{
+
+  if (token) {
+    next();
+  } else {
     res.render("Signup");
   }
-  
+};
+
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+app.get("/index", isAuthenticated, (req, res) => {
+  res.render("Signout");
 });
 
 app.get("/FAQ", (req, res) => {
@@ -73,7 +73,19 @@ app.get("/Signup", (req, res) => {
 //start Authentication
 
 app.post("/Signup", (req, res) => {
-  res.cookie("token", "imin");
+  
+  res.cookie("token", "imin", {
+    httpOnly: true,
+    expires: new Date(Date.now() + 60 * 1000),
+  });
+  res.redirect("/index");
+});
+
+app.get("/Signout", (req, res) => {
+  
+  res.cookie("token", null, {
+    expires: new Date(Date.now()),
+  });
   res.redirect("/index");
 });
 
@@ -86,6 +98,8 @@ app.post("/contact", (req, res) => {
   res.render("Success");
   // res.redirect("/post");
 });
+
+
 
 // app.get("/users", (req, res)=>{
 //     res.json({

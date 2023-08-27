@@ -1,130 +1,172 @@
-/* contact section  */
-#contact {
-    display: flex;
-    width: 158.5rem;
-    height: 50rem;
-    align-items: center;
-    flex-direction: column;
-    gap: 5rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Baloo+Bhai+2:wght@400;500&family=Balsamiq+Sans:ital@0;1&family=Caveat:wght@700&family=Kanit:wght@300&family=Lobster&family=Mynerve&family=PT+Sans+Narrow:wght@700&family=PT+Serif:ital@1&family=Poppins:wght@600&family=Tilt+Warp&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Ubuntu:wght@500&display=swap');
 
-#contact::before {
-    content: "";
-    background: url(contactbac.jpg) no-repeat center center/cover;
+/* Sign popup details  */
+
+.Spopup {
     position: absolute;
-    height: 86rem;
-    width: 165rem;
-    z-index: -1;
-    opacity: 0.5;
+    width: 33.3rem;
+    height: 40rem;
+    position: absolute;
+    top: 4rem;
+    left: 35rem;
+    transition: transform 0.3s, top 0.4s;
+    border-radius: 3.4rem;
+    box-shadow: 1px 0px 4px 0px;
+    opacity: 0.9;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.center1 {
-    width: 100%;
-    height: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    gap: 1rem;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-}
-
-#contact h1 span {
-    color: rgb(112, 110, 110);
-}
-
-.form-cover {
-    height: 36rem;
-    background: #80808059;
-    width: 45rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-cover form {
-    display: flex;
-    flex-direction: column;
-    width: 34rem;
-    height: 35rem;
-}
-
-.form-cover form h2 {
-    display: flex;
-    justify-content: center;
-    height: 8rem;
-    font-size: 4rem;
-}
-
-.form-cover form span {
-    font-size: 2rem;
-}
-
-.form-cover form input {
-    padding: 1rem;
-    border: none;
-    box-shadow: 0rem 0rem 0.5rem 0rem;
+.Spopup button {
+    padding: 0.5rem 4rem;
+    margin: 0rem 1rem;
+    font-size: 1rem;
     border-radius: 1rem;
-    outline: none;
-    background: #ffffff47;
-}
-
-#contact-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 4rem;
-    width: 176rem;
-}
-
-#contact-box input,
-#contact-box textarea {
-    width: 100%;
-    padding: 11px 20px;
-    border-radius: 10px;
-    font-size: 1.4rem;
-}
-
-#contact-box form {
-    width: 26%;
-}
-
-#contact-box label {
-    font-size: 23px;
-    font-family: 'Baloo Bhai 2', cursive;
-}
-
-.h-primary1 {
-    color: white;
-    font-size: 43px;
-    padding: 17px;
-    font-family: 'Baloo Bhai 2', cursive;
-    margin: 10px;
-}
-
-
-.center1 {
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    font-family: 'Baloo Bhai 2', cursive;
-}
-
-.submit-btn0 button {
-    padding: 1rem 3rem;
-    margin-top: 2rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    color: black;
+    background: #80808042;
+}
+
+
+
+.Spopup::before {
+    content: "";
+    background: url(Signbac.jpg) center center/cover;
+    z-index: -1;
+    opacity: 0.8;
+    position: absolute;
+    width: 33.3rem;
+    height: 40rem;
+    right: 0rem;
+    border-radius: 33px;
+    border: 2px solid aqua;
+    filter: grayscale(1);
+    background: linear-gradient(45deg, #ffffff, #818181);
+    box-shadow: 0px 5px 15px 4px #646464;
+}
+
+.open-popup1 {
+    visibility: visible;
+    top: 51rem;
+    left: 85rem;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 10000;
+    width: 41rem;
+    height: 48rem;
+}
+
+.Spopup h1 {
+    margin: 3.9rem 1.2rem;
+    text-shadow: 2px 2px 2px black;
+    display: flex;
+    position: relative;
+    left: 4.9rem;
+    color: rgb(0, 0, 0);
+    font-size: 6rem;
+}
+
+.Spopup span {
+    position: relative;
+    font-weight: 1000;
+    font-size: 2rem;
+    display: flex;
+    left: 1.2rem;
+    color: rgb(0 0 0);
+}
+
+
+.inputS {
+    color: #000000;
+    padding: 1rem;
+    padding: 0.7rem;
+    margin: 0.6rem 1rem;
+    width: 27.4rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin-bottom: 2.6rem;
+    outline: none;
+    box-shadow: 1px 1px 2px 1px inset gray;
+    background: #c5c5c5;
+    box-shadow: 0rem 0rem 0.5rem 0rem;
+}
+
+.inputS1 {
+    color: #000000;
+    padding: 0.7rem;
+    margin: 0.6rem 1rem;
+    width: 27.4rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: .8rem;
+    margin-bottom: 2.6rem;
+    outline: none;
+    box-shadow: 1px 1px 2px 1px inset gray;
+    background: #c5c5c5;
+    box-shadow: 0rem 0rem 0.5rem 0rem;
+}
+
+.SLink {
+    font-size: 1rem;
+    position: absolute;
+    left: 22.4rem;
+    margin-top: .9rem;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px gray;
+    color: rgb(7, 0, 0);
+}
+
+.SLink:hover {
+    color: rgb(133, 133, 133);
+
+}
+
+.SinputS3 {
+    position: absolute;
+    left: 1.5rem;
+    top: 44rem;
+}
+
+.SinputS3 .inputS3 {
+    padding: .9rem 1.9rem;
     border-radius: 1rem;
-    background: lightgray;
+    border: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+    background: transparent;
+    text-shadow: 2px 3px 2px gray;
+    font-weight: 750;
+    box-shadow: 0px 0px 2px 1px #c5b2b2;
+    position: relative;
+    left: 0rem;
+    color: rgb(0, 0, 0);
+    top: 11rem;
 }
 
-.submit-btn0 button:hover {
-    background: gray;
-    font-size: 1.4rem;
+.SinputS3 .inputS3:hover {
+    padding: 1rem 2rem;
+    background: linear-gradient(transparent, blue, aqua, rgb(143, 74, 255));
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 1px #08e2ff;
 }
 
-.form-group span {
-    color: orangered;
+
+.sign {
+    margin-left: 85.2rem;
+}
+
+/* login page eye */
+
+.eye i {
+    color: #000000;
+    position: absolute;
+    bottom: 3.7rem;
+    left: 29rem;
+    font-size: 1.7rem;
+}
+
+#Ehide1 {
+    display: none;
 }
