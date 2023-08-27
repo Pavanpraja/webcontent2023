@@ -41,14 +41,20 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index");
 
+  
+});
+app.get("/index", (req, res) => {
+
   const { token } = req.cookies;
   console.log(token);
-
+  
   if(token){
     res.render("Signout");
-  }else{
+  }
+  else{
     res.render("Signup");
   }
+  
 });
 
 app.get("/FAQ", (req, res) => {
@@ -60,16 +66,17 @@ app.get("/Projects", (req, res) => {
 app.get("/Tos", (req, res) => {
   res.render("TOS");
 });
-
+app.get("/Signup", (req, res) => {
+  res.render("Signup");
+});
 
 //start Authentication
+
 app.post("/Signup", (req, res) => {
-  res.cookie("token", "imin", {
-    httpOnly: true,
-    expires: new Date(Date.now() + 60 * 1000),
-  });
-  res.redirect("/");
+  res.cookie("token", "imin");
+  res.redirect("/index");
 });
+
 app.post("/contact", (req, res) => {
   console.log(req.body.name);
   console.log(req.body.email);

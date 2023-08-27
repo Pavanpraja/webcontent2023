@@ -1,0 +1,130 @@
+/* contact section  */
+#contact {
+    display: flex;
+    width: 158.5rem;
+    height: 50rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#contact::before {
+    content: "";
+    background: url(contactbac.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 86rem;
+    width: 165rem;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.center1 {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+#contact h1 span {
+    color: rgb(112, 110, 110);
+}
+
+.form-cover {
+    height: 36rem;
+    background: #80808059;
+    width: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-cover form {
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    height: 35rem;
+}
+
+.form-cover form h2 {
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    font-size: 4rem;
+}
+
+.form-cover form span {
+    font-size: 2rem;
+}
+
+.form-cover form input {
+    padding: 1rem;
+    border: none;
+    box-shadow: 0rem 0rem 0.5rem 0rem;
+    border-radius: 1rem;
+    outline: none;
+    background: #ffffff47;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+    width: 176rem;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+}
+
+#contact-box form {
+    width: 26%;
+}
+
+#contact-box label {
+    font-size: 23px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.h-primary1 {
+    color: white;
+    font-size: 43px;
+    padding: 17px;
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 10px;
+}
+
+
+.center1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.submit-btn0 button {
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    background: lightgray;
+}
+
+.submit-btn0 button:hover {
+    background: gray;
+    font-size: 1.4rem;
+}
+
+.form-group span {
+    color: orangered;
+}
