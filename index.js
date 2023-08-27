@@ -42,12 +42,13 @@ app.get("/", (req, res) => {
   res.render("index");
 
   const { token } = req.cookies;
+  console.log(token);
 
-  // if(token){
-  //   res.render("Signout");
-  // }else{
-  //   res.render("Signup");
-  // }
+  if(token){
+    res.render("Signout");
+  }else{
+    res.render("Signup");
+  }
 });
 
 app.get("/FAQ", (req, res) => {
