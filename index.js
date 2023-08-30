@@ -92,6 +92,30 @@ app.get("/register", (req, res) => {
 
 //start Authentication
 
+app.post("/register", async (req, res)=>{
+  console.log(req.body);
+
+  const {name, email, password} = req.body;
+
+  let user = await userMess.findOne({email});
+
+  if(user) {
+    return res.redirect("/Signout");
+  }
+
+
+  user = await userMess.create({name, email, password });
+
+  const token = jwt.sign({_id:user._id}, "lajfjljafjldfa");
+  console.log(token);
+
+  res.cookie("token", token,{
+    httpOnly: true,
+    expires: new Date(Date.now() + 60*1000),
+  });
+  res.redirect("/");
+});
+
 app.post("/Signup", async (req, res) => {
   console.log(req.body);
 
@@ -106,7 +130,7 @@ app.post("/Signup", async (req, res) => {
   const isMatch = user.password === password;
 
   if(!isMatch){
-    return res.render("Signup", {message: "Incorrect password"});
+    return res.render("Signup", { message: "Incorrect password"});
   }
 
   // user = await userMess.create({ email, password });
@@ -121,28 +145,6 @@ app.post("/Signup", async (req, res) => {
   res.redirect("/index");
 });
 
-app.post("/register", async (req, res)=>{
-  console.log(req.body);
-
-  const {name, email, password} = req.body;
-
-  let user = await userMess.findOne({email});
-
-  if(user) {
-    return redirect("/Signup");
-  }
-
-
-  user = await userMess.create({name, email, password });
-
-  const token = jwt.sign({_id:user._id}, "lajfjljafjldfa");
-  console.log(token);
-
-  res.cookie("token", token,{
-    httpOnly: true,
-    expires: new Date(Date.now() + 60*1000),
-  });
-});
 
 
 app.get("/Signout", (req, res) => {
