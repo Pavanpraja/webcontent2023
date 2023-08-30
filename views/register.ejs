@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        .Spopup{
+            height: 46rem;
+        }
+        .Spopup::before{
+            height: 46rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="first_button">
+        <form method="POST" class="Spopup" id="Spopup">
+            <h1 style="font-size: 3rem;">Resister Now</h1>
+            <span class="Sinput">Name</span>
+            <br><input type="text" name="name" class="inputS" placeholder="Enter Name" autocomplete="off"
+                required>
+            <span class="Sinput">Email</span>
+            <br><input type="email" name="email" class="inputS" placeholder="Enter Email" autocomplete="off"
+                required>
+            <br><span class="Sinput1">Password</span>
+            <br><input type="password" name="password" id="SSI" class="inputS1" placeholder="Enter Password"
+                autocomplete="off" required>
+            
+            <span class="eye" onclick="myHiddenEye()">
+                <i class="fa-regular fa-eye" id="Ehide1" style="color: #000000;"></i>
+                <i class="fa-regular fa-eye-slash" id="Ehide2" style="color: #000000;"></i>
+            </span>
+
+            <br><a href="Fpassword" class="SLink">Forget Your Password?</a>
+            <br><button type="submit" class="inputS3" autocomplete="off">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
