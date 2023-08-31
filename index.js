@@ -100,11 +100,11 @@ app.post("/register", async (req, res)=>{
   let user = await userMess.findOne({email});
 
   if(user) {
-    return res.redirect("/Signout");
+    return res.redirect("/Signup");
   }
 
 
-  user = await userMess.create({name, email, password });
+  user = await userMess.create({name, email, password, });
 
   const token = jwt.sign({_id:user._id}, "lajfjljafjldfa");
   console.log(token);
