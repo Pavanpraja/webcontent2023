@@ -117,7 +117,6 @@ app.post("/register", async (req, res)=>{
 });
 
 app.post("/Signup", async (req, res) => {
-  console.log(req.body);
 
   const { email, password } = req.body;
 
@@ -155,8 +154,6 @@ app.get("/Signout", (req, res) => {
 });
 
 app.post("/contact", (req, res) => {
-  console.log(req.body.name);
-  console.log(req.body.email);
 
   Message.create({ name: req.body.name, email: req.body.email }); //Mongoose material
 
