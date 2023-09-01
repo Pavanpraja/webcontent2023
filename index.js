@@ -48,7 +48,6 @@ app.set("view engine", "ejs");
 
 const isAuthenticated = async (req, res, next) => {
   const { token } = req.cookies;
-  console.log(token);
 
   if (token) {
     const decoded = jwt.verify(token, "lajfjljafjldfa");
@@ -68,8 +67,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/index", isAuthenticated, (req, res) => {
-  console.log(req.userMess);
-  res.render("Signout");
+  res.render("index");
 });
 
 
@@ -93,7 +91,6 @@ app.get("/register", (req, res) => {
 //start Authentication
 
 app.post("/register", async (req, res)=>{
-  console.log(req.body);
 
   const {name, email, password} = req.body;
 
@@ -107,7 +104,6 @@ app.post("/register", async (req, res)=>{
   user = await userMess.create({name, email, password, });
 
   const token = jwt.sign({_id:user._id}, "lajfjljafjldfa");
-  console.log(token);
 
   res.cookie("token", token,{
     httpOnly: true,
