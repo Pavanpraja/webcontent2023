@@ -63,7 +63,7 @@
             filter: var(--filter);
         }
 
-        .rightnav button {
+        .rightnav .s-btn {
             padding: 0.9rem 2.1rem;
             font-size: 1.6rem;
             font-weight: 600;
@@ -76,7 +76,7 @@
             color: var(--secondary-color);
         }
 
-        .rightnav button:hover {
+        .rightnav .s-btn:hover {
             background: #ebebeb;
             font-size: 1.5rem;
             color: var(--primary-color);

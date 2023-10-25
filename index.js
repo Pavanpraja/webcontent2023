@@ -63,7 +63,7 @@ const isAuthenticated = async (req, res, next) => {
 
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("signup");
 });
 
 app.get("/index", isAuthenticated, (req, res) => {
@@ -111,6 +111,8 @@ app.post("/register", async (req, res)=>{
     expires: new Date(Date.now() + 60*1000),
   });
   res.redirect("/");
+  //Signout button creation
+  
 });
 
 app.post("/Signup", async (req, res) => {
@@ -133,7 +135,6 @@ app.post("/Signup", async (req, res) => {
   // user = await userMess.create({ email, password });
 
   const token = jwt.sign({ _id: user._id }, "lajfjljafjldfa");
-  console.log(token);
 
   res.cookie("token", token, {
     httpOnly: true,
