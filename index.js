@@ -110,9 +110,7 @@ app.post("/register", async (req, res)=>{
     httpOnly: true,
     expires: new Date(Date.now() + 60*1000),
   });
-  res.redirect("/");
-  //Signout button creation
-  
+  res.redirect("/");  
 });
 
 app.post("/Signup", async (req, res) => {
@@ -166,6 +164,6 @@ app.post("/contact", (req, res) => {
 //     })
 // })
 
-app.listen(5500, () => {
+app.listen(5300, () => {
   console.log("Server is working");
 });
